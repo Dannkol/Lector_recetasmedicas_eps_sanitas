@@ -1,7 +1,7 @@
 {
   "liveServer.settings.port": 5500,
   "liveServer.settings.root": "/",
-  "liveServer.settings.CustomBrowser": "firefox",
+  "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.https": {
     "enable": true,
     "cert": "/home/david/Desktop/Lector_recetasmedicas_eps_sanitas/localhost.pem",

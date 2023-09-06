@@ -10,6 +10,8 @@ import fs from 'fs';
 
 import cors from 'cors'
 
+import {routes as router_aut} from './src/routes/paciente.routes.js'
+
 const app = express();
 
 app.use(cors());
@@ -20,6 +22,8 @@ configureApp(app);
 app.get('/', async (req, res) => {
     res.send('Welcome')
 })
+
+app.use('/api', router_aut)
 
 app.post('/upload', async (req, res) => {
     const base64Image = req.body.image;

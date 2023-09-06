@@ -1,0 +1,123 @@
+*{
+    padding: 0 auto;
+    margin: 0 auto;
+    
+}
+
+#container {
+    background-color: #333562;
+    width: 100%;
+}
+
+#nav {
+    padding: 1rem 0 0.8rem 0;
+    background-color: #202443;
+    border-radius: 0 0 2.5rem 2.5rem;
+}
+#img {
+    margin: 0.8rem auto;
+    width: 5.2rem;
+    border: none;
+}
+
+#pContainer{
+    overflow: hidden;
+    margin: 0 0 0 0;
+    color: aliceblue;
+}
+
+
+
+#cuidar{
+    margin: 0 0 1.2rem 0;
+    padding: 2rem 1rem 0.5rem 1rem;
+    color: aliceblue;
+    background-color: #333562;
+    border: none;
+}
+#a{
+    text-decoration: none;
+    color:#333562;
+}
+#aa{
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 0.9rem;
+}
+
+
+#pCuidar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pinguino {
+    width: 12rem;
+    height: auto;
+    transform: rotate(312deg) translate(42px, 30px);
+
+}
+
+#container2{
+    background-color: #ffffff;
+    border-radius:  3rem 3rem 0 0;
+    color: #101120;
+    padding: 3.5rem 2.5rem 1.5rem 0rem;
+    gap: 1.5rem 1rem;
+
+}
+#cuidar2{
+    background-color: aliceblue;
+    margin: 0.2rem;
+    border-radius: 1rem;
+    padding: 3%;
+    border: solid 0.2rem rgb(255, 255, 255);
+    box-shadow: 0 8px 24px 0 rgba(66, 53, 76, 0.244);
+
+}
+
+.contenido{
+    gap: 3%;
+    color: antiquewhite;
+    padding: 3% 7% 3% 3%;
+    
+}
+.contenido h2,.contenido p{
+    margin: 0;
+}
+
+.aaa{
+    font-size: .5rem;
+    padding: .1rem;
+    padding-left: .7rem;
+}
+.aaaa{
+    font-size: .7rem;
+}
+.barraCircular{
+    background-color: #101120;
+    width: 100%;
+    height: auto;
+    border-radius: 0 4rem 4rem 0;
+
+}
+.alerta{
+    visibility: hidden;
+}
+
+.barraCircular img {
+    width: 40px;
+    height: 40px;
+}
+.svgCamara{
+    width: 40px;
+}
+.buttonInt{
+    width: 50px;
+    height: 50px;
+ 
+}
+.lastdiv{
+    margin-bottom: 2rem;
+}
