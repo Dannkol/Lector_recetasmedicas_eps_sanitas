@@ -1,0 +1,99 @@
+*{
+    padding: 0 auto;
+    margin: 0 auto;
+    
+}
+
+#container {
+    background-color: #333562;
+    width: 100%;
+}
+
+#nav {
+    padding: 1rem 0 0.8rem 0;
+    background-color: #202443;
+    border-radius: 0 0 2.5rem 2.5rem;
+}
+#img {
+    margin: 0.8rem auto;
+    width: 5.2rem;
+    border: none;
+}
+
+#pContainer{
+    overflow: hidden;
+    margin: 0rem 0rem 0rem 53%;
+    color: aliceblue
+}
+
+
+svg{
+    width: 20px;
+    height: 20px;
+    fill: #e7b730;
+    margin-bottom: 1.3%;
+
+}
+#aa{
+    text-decoration: none;
+    color:#e7b730;
+    font-size: 1rem;
+}
+#cImg{
+    width: 5rem;
+    padding: 0 0 0.5rem 0;
+    margin:auto;
+
+}
+
+#pCuidar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pinguino {
+    width: 12rem;
+    height: auto;
+    transform: rotate(312deg) translate(42px, 30px);
+
+}
+
+#container2{
+    background-color: #fdfdfe;
+    border-radius:  3rem 3rem 0 0;
+    color: #101120;
+    padding: 2rem 2.5rem 1.5rem 1.5rem;
+    gap: 1.3rem 1rem;
+
+}
+
+.recomendationsC{
+    background-color: rgb(35, 48, 61);
+    width: 100%;
+    height: 10vh;
+    border-radius: 0 4rem 4rem 0;
+    box-shadow: 1px 1px 10px rgb(20, 22, 24);
+   
+}
+
+#cuidar2{
+    background-color: aliceblue;
+    margin: 0;
+    border-radius: 1rem;
+    padding: 0 0 0 0;
+    border: solid 0.2rem rgb(255, 255, 255);
+    box-shadow: 0 8px 24px 0 rgba(66, 53, 76, 0.244);
+    
+}
+
+#a{
+    text-decoration: none;
+    color:#333562;
+
+}
+#a img{
+    width: 50%;
+   
+}
+

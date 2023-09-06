@@ -1,0 +1,103 @@
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+#body{
+    background-color: #202443;
+}
+
+#main {
+    background-color: #202443;
+}
+
+#title {
+    color: aliceblue;
+    text-align:end;
+    margin: 1rem 1rem 1rem 0;
+}
+
+#chatBox{
+    width: 90%;
+    margin: 0.5rem auto;
+    font-size: 1rem;
+}
+
+#chatBoxMe{
+    width: 90%;
+    margin: 0.5rem auto;
+    font-size: 1rem;
+}
+
+#chatBoxText{
+    width: 90%;
+    margin: 0.5rem auto;
+    font-size: 1rem; /**/
+}
+
+#chatMiniMe{
+    width: 62%;
+    padding: 1rem;
+    border-radius: 1rem;
+    float: right;
+    background-color: #b2b8ce;
+}
+
+#chatText{
+    padding: 0.5rem auto 0.5rem auto;
+    border-radius: 1rem 0 0 1rem;
+    background-color: #b2b8ce; /**/
+    text-align: center;
+    margin: 0.7rem 0 0 0;
+}
+
+#chat{
+    width: 85%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: aliceblue;
+}
+
+#chatMiddle{
+    width: 75%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: aliceblue;
+
+}
+
+#chatMini{
+    width: 62%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: aliceblue;
+}
+
+#user {
+    text-align: right;
+    font-size: 1rem;
+    color: aliceblue;
+    background-color: #333562;
+    padding: 0.3rem 1rem;
+    border-radius: 0.7rem;
+    margin: 0.5rem 0 0 0;
+}
+
+#send{
+    float: right;
+    font-size: 1rem;
+    color: aliceblue;
+    background-color: #333562;
+    padding: 0.8rem;
+    border-radius: 0 1rem 1rem 0;
+    margin: 0.7rem 0 1rem 0;
+
+}
+

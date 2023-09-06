@@ -1,0 +1,113 @@
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#body{
+  background-color: #202443;
+}
+
+#titleBox {
+  margin: 2rem 0 0 0;
+}
+
+#title {
+  color: aliceblue;
+  margin: 1rem auto 1rem auto;
+  max-width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#search{
+  text-align: center;
+  border-radius: 2rem;
+  font-size: 1rem;
+  background-color: aliceblue;
+}
+
+#bigNew{
+  background-color: #202443;
+  margin: 2rem 1rem 0 1rem;
+  border-radius: 0.5rem;
+}
+
+#titleBigNew{
+  font-size: 1.5rem;
+  margin: 0 0 0 0.5rem;
+  color: aliceblue;
+}
+
+#bigAutor{
+  color: aliceblue;
+  font-size: 1rem;
+  padding: 0.3rem 0 0 1.5rem;
+  margin: 0 0 2.5rem 0;
+
+}
+
+#bigDate{
+  color: aliceblue;
+  font-size: 1rem;
+  padding: 0.3rem 1.5rem 0 0;
+  margin: 0 0 2.5rem 0;
+
+}
+
+#bigImg{
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+
+#subtitle{
+  margin: 2rem auto 1rem auto;
+  color: aliceblue;
+}
+
+#box1{
+  width: 90%;
+  margin: auto auto 2rem auto;
+  box-shadow: 2px 2px 2px 0 rgba(21, 31, 61, 0.2);
+  border-radius: 0.7rem;
+  background-color: aliceblue;
+  text-align: left;
+}
+
+#texts {
+  margin: 0 0 1rem 0;
+}
+
+#categorie{
+  margin: 1rem auto 0 auto;
+  font-size: 1.1rem;
+}
+
+#paragraph{
+  margin: 0.4rem 0 0.8rem 0;
+  font-size: 0.9rem;
+  line-height: 1.1;
+}
+
+#box-img{
+  padding: 0.5rem 0rem 0.5rem 0;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+#imgs{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+#autor, #date {
+  font-size: 0.7rem;
+}

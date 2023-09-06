@@ -1,55 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subir Imagen y Enviar a Backend</title>
-</head>
-<body>
-    <input type="file" id="fileInput">
-    <br>
-    <br>
-    <button onclick="uploadImage()">Subir Imagen</button>
-    <div id="result">
-
-    </div>
-    <script>
-        async function uploadImage() {
-            const fileInput = document.getElementById('fileInput');
-            const selectedFile = fileInput.files[0];
-
-            if (!selectedFile) {
-                alert('Por favor, seleccione una imagen.');
-                return;
-            }
-
-            const reader = new FileReader();
-
-            reader.onload = async function (event) {
-                const base64Image = event.target.result;
-                try {
-                    const response = await fetch('https://192.168.1.8:3000/upload', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({ image: base64Image }),
-                    });
-                    const data = await response.json();
-                    const div = document.querySelector('#result').innerHTML = JSON.stringify(data);
-                    console.log( data);
-                    if (response.ok) {
-                        alert('Imagen enviada con éxito al backend.');
-                    } else {
-                        alert('Error al enviar la imagen al backend.');
-                    }
-                } catch (error) {
-                    console.error('Error:', error);
-                }
-            };
-
-            reader.readAsDataURL(selectedFile);
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" type="module" defer></script>
+    <title>First</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="manifest" href="./manifest.json">
+    <script src="./routers.js" type="module" defer></script>
+    <script type="text/javascript">
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
+      }
     </script>
-</body>
+  </head>
+  <body id="body">
+    <button
+      class="btn"
+      type="button"
+      id="main"
+      data-toggle="modal"
+      data-target="#exampleModalLong"
+    >
+      <div class="container" id="infoCode">
+        <div id="scanText" class="text-center">
+          <strong>TAP TO SCAN</strong>
+        </div>
+        <div class="text-center container" id="qrInstructions">
+          Share your <strong>personal code </strong>for whatever reason!
+        </div>
+        <div class="container animate__animated animate__bounceInUp" id="qr">
+          <img src="./img/qr.png" id="qrImg" class="row" alt="" />
+        </div>
+      </div>
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModalLong"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Terminos y condiciones
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div id="qr_reader" style="display: none;">
+              <video id="preview" style="width: 100%; height: 100%;"></video>
+            </div>
+
+            <p>
+              Para cualquier producto no dañado, simplemente devuélvelo con los
+              accesorios y el paquete incluidos junto con el recibo original (o
+              recibo de regalo) dentro de los 14 días posteriores a la fecha que
+              recibiste el producto, y lo cambiaremos o te ofreceremos un
+              reembolso basado en el método de pago original . Además, ten en
+              cuenta lo siguiente: (i) Los productos solo se pueden devolver en
+              el país en el que se compraron originalmente; y (ii) los
+              siguientes productos no son elegibles para la devolución: [lista
+              de artículos].
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary" id="qr_boton">
+              <a id="a">Aceptar</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

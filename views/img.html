@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Imagen y Enviar a Backend</title>
+</head>
+<body>
+    <input type="file" id="fileInput">
+    <br>
+    <br>
+    <button onclick="uploadImage()">Subir Imagen</button>
+    <div id="result">
+
+    </div>
+    <script>
+        async function uploadImage() {
+            const fileInput = document.getElementById('fileInput');
+            const selectedFile = fileInput.files[0];
+
+            if (!selectedFile) {
+                alert('Por favor, seleccione una imagen.');
+                return;
+            }
+
+            const reader = new FileReader();
+
+            reader.onload = async function (event) {
+                const base64Image = event.target.result;
+                try {
+                    const response = await fetch('https://192.168.1.8:3000/upload', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ image: base64Image }),
+                    });
+                    const data = await response.json();
+                    const div = document.querySelector('#result').innerHTML = JSON.stringify(data);
+                    console.log( data);
+                    if (response.ok) {
+                        alert('Imagen enviada con éxito al backend.');
+                    } else {
+                        alert('Error al enviar la imagen al backend.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            };
+
+            reader.readAsDataURL(selectedFile);
+        }
+    </script>
+</body>
+</html>

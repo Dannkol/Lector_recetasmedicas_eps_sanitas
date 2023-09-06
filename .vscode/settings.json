@@ -1,11 +1,11 @@
 {
   "liveServer.settings.port": 5500,
   "liveServer.settings.root": "/",
-  "liveServer.settings.CustomBrowser": "firefox",
+  "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.https": {
     "enable": true,
-    "cert": "/home/dannkol/Documents/pinguieapp/pruebas/localhost.pem",
-    "key": "/home/dannkol/Documents/pinguieapp/pruebas/localhost.key",
+    "cert": "C:/Users/CampusLands/Documents/Lector_recetasmedicas_eps_sanitas/localhost.pem",
+    "key": "C:/Users/CampusLands/Documents/Lector_recetasmedicas_eps_sanitas/localhost.key",
     "passphrase": "pass"
   }
 }
