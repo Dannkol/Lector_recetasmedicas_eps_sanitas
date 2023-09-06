@@ -17,7 +17,7 @@ const obtenerFormula = async (token) => {
 
     const estudiantes = await resultado.json();
     const rta = estudiantes;
-    console.log(rta.json);
+    console.log(rta[0].data);
     console.log(JSON.parse(rta[0].data).data);
     JSON.parse(rta[0].data).data.tratamiento.forEach((item) => {
       html += `<div class="barraCircular d-flex justify-content-center align-items-center   ">

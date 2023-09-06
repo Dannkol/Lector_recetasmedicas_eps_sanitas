@@ -4,7 +4,6 @@ import { generateAccessToken } from '../helpers/createToken.js'
 export class FormulaController {
     static async Data(req, res) {
         try {
-            const { correo, password } = req.body;
             const con = await getConnection();
 
             const [rows] = await con.execute(
