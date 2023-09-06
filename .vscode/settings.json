@@ -1,0 +1,11 @@
+{
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.root": "/",
+  "liveServer.settings.CustomBrowser": "firefox",
+  "liveServer.settings.https": {
+    "enable": true,
+    "cert": "/home/dannkol/Documents/pinguieapp/pruebas/localhost.pem",
+    "key": "/home/dannkol/Documents/pinguieapp/pruebas/localhost.key",
+    "passphrase": "pass"
+  }
+}
