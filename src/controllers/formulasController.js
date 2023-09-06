@@ -1,0 +1,1 @@
+/* "SELECT data FROM formula WHERE id=%s", (id,) */
