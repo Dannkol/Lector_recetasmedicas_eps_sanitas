@@ -4,8 +4,8 @@
   "liveServer.settings.CustomBrowser": "firefox",
   "liveServer.settings.https": {
     "enable": true,
-    "cert": "/home/dannkol/Documents/pinguieapp/pruebas/localhost.pem",
-    "key": "/home/dannkol/Documents/pinguieapp/pruebas/localhost.key",
+    "cert": "/home/david/Desktop/Lector_recetasmedicas_eps_sanitas/localhost.pem",
+    "key": "/home/david/Desktop/Lector_recetasmedicas_eps_sanitas/localhost.key",
     "passphrase": "pass"
   }
 }
