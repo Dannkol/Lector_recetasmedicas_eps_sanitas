@@ -1,4 +1,5 @@
-import { compare } from "../helpers/bcrypt";
+import getConnection from "../database/connections.js";
+import { generateAccessToken} from '../helpers/createToken.js'
 
 export class UsuarioController{
     static async Login(req,res){

@@ -23,7 +23,7 @@ app.get('/', async (req, res) => {
     res.send('Welcome')
 })
 
-app.use('/auth', router_aut)
+app.use('/api', router_aut)
 
 app.post('/upload', async (req, res) => {
     const base64Image = req.body.image;
