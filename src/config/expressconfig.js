@@ -1,4 +1,5 @@
 import express from "express";
+import passport from 'passport'
 
 const configureApp = (app) => {
   // Configuraciones de Express
@@ -6,6 +7,7 @@ const configureApp = (app) => {
   app.use(express.urlencoded({limit: '50mb'}));
   // Otros middlewares y configuraciones de Express
     
+  app.use(passport.initialize())
 
     // reat-limit
     

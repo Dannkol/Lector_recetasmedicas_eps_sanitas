@@ -1,4 +1,4 @@
-const url = "http://127.0.0.1:5000/api/formula";
+const url = "https://192.168.130.79:3000/api/formula";
 
 const obtenerFormula = async (token) => {
   let html = "";
@@ -10,22 +10,23 @@ const obtenerFormula = async (token) => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Accept: "*/*",
-        Authorization: `Bearer ${token}`,
+        Accept: "*/*", 
+        Authorization: `bearer ${token}`,
       },
-    });
+    }); 
 
     const estudiantes = await resultado.json();
     const rta = estudiantes;
-
-    JSON.parse(rta[0]).data.medicamentos.forEach((item) => {
+    console.log(rta[0].data);
+    console.log(JSON.parse(rta[0].data).data);
+    JSON.parse(rta[0].data).data.tratamiento.forEach((item) => {
       html += `<div class="barraCircular d-flex justify-content-center align-items-center   ">
         <img class="alerta" src="../img/dangerr.png" alt="" srcset="">
         <div class="contenido">
-            <h2>${item.nombre}</h2>
-            <p class="aaa">Fecha: dd/mm/aa</p>
-            <p class="aaa">Info del tratamiento</p>
-            <p>Dosis: 1 c/d 8hr</p>
+            <h2>${item.description}</h2>
+            <p class="aaa">Duracion: ${item.duracion}</p>
+            <p class="aaa">${item.indicacion}</p>
+            <p>Dosis: ${item.dosis}</p>
         </div>
         <img src="../img/complete.png" alt="" srcset="">
     </div>`;

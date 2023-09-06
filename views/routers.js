@@ -21,8 +21,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 body: JSON.stringify(user)
               });
               const data = await response.json();
-              const str = data.jwt.slice(2);
-              config.data(str.slice(0, str.length - 1));
+              const str = data.jwt;
+
+              config.data(str);
+              console.log(str);
               location.href ='./saludo/index.html';
             } catch (error) {
               alert(error);
