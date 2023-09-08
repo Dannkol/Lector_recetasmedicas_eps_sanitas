@@ -4,8 +4,8 @@
   "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.https": {
     "enable": true,
-    "cert": "C:/Users/CampusLands/Documents/Lector_recetasmedicas_eps_sanitas/localhost.pem",
-    "key": "C:/Users/CampusLands/Documents/Lector_recetasmedicas_eps_sanitas/localhost.key",
+    "cert": "/home/remote/Documentos/Lector_recetasmedicas_eps_sanitas/localhost.pem",
+    "key": "/home/remote/Documentos/Lector_recetasmedicas_eps_sanitas/localhost.key",
     "passphrase": "pass"
   }
 }

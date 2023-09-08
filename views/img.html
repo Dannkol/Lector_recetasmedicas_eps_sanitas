@@ -28,7 +28,7 @@
             reader.onload = async function (event, token) {
                 const base64Image = event.target.result;
                 try {
-                    const response = await fetch('https://192.168.130.79:3000/upload', {
+                    const response = await fetch('https://192.168.0.101:3000/upload', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

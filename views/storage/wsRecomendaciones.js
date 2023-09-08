@@ -1,4 +1,4 @@
-const url = "https://192.168.130.79:3000/api/formula";
+const url = "https://192.168.0.101:3000/api/formula";
 
 const obtenerFormula = async (token) => {
   let html = "";

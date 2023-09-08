@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         console.log(user)
         async function postData() {
             try {
-              const response = await fetch('https://192.168.130.79:3000/api/login', {
+              const response = await fetch('https://192.168.0.101:3000/api/login', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'
