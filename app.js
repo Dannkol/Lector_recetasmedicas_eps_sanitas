@@ -23,6 +23,7 @@ configureApp(app);
 
 
 app.get('/', async (req, res) => {
+    console.log('hola');
     res.send('Welcome')
 })
 
@@ -148,6 +149,7 @@ app.post('/upload', passport.authenticate("bearer", { session: false }), async (
                     dosis: `${data[data.indexOf('vía') + 2]} ${data[data.indexOf('vía') + 3]} cada ${data[data.indexOf('cada') + 1]} hora(s)`
                 }
             )
+            console.log(texto);
             formula.data.tratamiento.push(dataDb[0])
             console.log(formula.data.tratamiento);
 
